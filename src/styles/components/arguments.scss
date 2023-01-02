@@ -1,0 +1,119 @@
+.container-arguments {
+    width: 1110px;
+    height: 608px;
+    margin: 120px auto;
+
+    h2 {
+        text-align: center;
+        color: #495567;
+        margin-bottom: 103px;
+    }
+
+    .container-section {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 512px;
+    }
+
+    section {
+        position: relative;
+        text-align: center;
+        width: 350px;
+
+        img {
+            border-radius: 100%;
+            margin-bottom: 87px;
+        }
+
+        h3 {
+            margin-bottom: 27px;
+            color:#495567;
+        }
+
+        p {
+            color: #939CAA;
+        }
+    }
+
+    .circle {
+        padding: 34px;
+        position: absolute;
+        left: 50%;
+        top: 199px;
+        transform: translateX(-50%);
+        width: 96px;
+        height: 96px;
+        background: $orange;
+        border-radius: 100%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .container-arguments {
+        width: min-content;
+        height: auto;
+        margin: 120px auto;
+
+        .container-section {
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+
+            section:not(:last-child) {
+                margin-bottom: 55px;
+            }
+
+            section {
+                width: 500px;
+
+                h3 {
+                    margin-bottom: 105;
+                }
+            }
+        }
+
+        .circle {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .container-arguments {
+        width: 80%;
+
+        .container-section {
+            width: 100%;
+
+            section:not(:last-child) {
+                margin-bottom: 55px;
+            }
+
+            section {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    .container-arguments {
+        
+        .container-section {
+            section {
+                width: 100%;
+
+                img {
+                    width: 220px;
+                }
+            }
+        }
+        .circle{
+            top: 160px;
+        } 
+    }
+}

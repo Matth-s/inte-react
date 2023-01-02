@@ -1,0 +1,135 @@
+header {
+    padding: 21px 0;
+    width: 100%;
+    height: 96px;
+
+    .toggle {
+        display: flex;
+        cursor: pointer;
+        display: none;
+
+        .close {
+            display: none;
+        }
+    }
+
+    img {
+        margin-right: 58px;
+    }
+
+    nav {
+        margin: auto;
+        width: 1106px;
+        height: 53px;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        width: 940px;
+
+        a:nth-child(2) {
+            margin: 0 32px;
+        }
+    
+        a:nth-child(3) {
+            margin-right: auto;
+        }
+    
+        a:last-child {
+            justify-content: center;
+            width: 180px;
+            height: 53px;
+            background-color: $orange;
+            border: 2px solid $orange;
+            color: #FFF;
+        }
+    }   
+
+    a:last-child:hover {
+        background-color: #FFF;
+        color: $orange;
+    }
+
+    a:hover {
+        color: $orange;
+    }
+
+    .center {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    header {
+
+        nav {
+            width: 90%;
+        }        
+    }
+}
+
+@media screen and (max-width: 700px) {
+    header {
+        height: 64px;
+        padding: 23px 0;
+        position: relative;
+
+        .logo {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .toggle {
+            display: block;
+        }
+
+        nav {
+            height: 20px;
+        }
+
+        ul {
+            transform: translateX(-100%);
+            flex-direction: column;
+            justify-content: left;
+            position: absolute;
+            top: 64px;
+            left: 0;
+            background: #333A44;
+            z-index: 2;
+            width: 256px;         
+            height: 94vh;
+            padding: 64px 32px 24px 32px;
+            
+            a:nth-child(2) {
+                margin: 24px 0;
+            }
+        
+            a:nth-child(3) {
+                margin: 0 0 auto;
+            }
+
+            a:not(:last-child) {
+                margin-right: auto;
+            }
+
+            a:last-child{
+                width: 192px;
+            }
+        }
+
+        .responsive {
+            transform: translateX(0);
+            transition: 0.6s transform;            
+        }
+
+        .remove {
+            transform: translateX(-100%);
+            transition: 0.6s transform; 
+        }
+    }    
+}
+

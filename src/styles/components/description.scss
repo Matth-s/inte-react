@@ -1,0 +1,122 @@
+.container-description {
+    display: flex;
+    width: 1275px;
+    height: 291px;
+    padding-left: 165px;
+    margin-bottom: 200px;
+    position: relative;
+
+    .div-section {
+        width: 350px;
+
+        img {
+            margin-bottom: 40px;
+        }
+    }
+
+    .div-section:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    section {
+        height: 155px;
+
+        h3 {
+            margin-bottom: 27px;
+            color: #495567;
+        }
+
+        p {
+            color:#939CAA;
+        }
+    }
+
+    span {
+        z-index: -1;
+        position: absolute;
+        left: 0;
+        top: 37px;
+        width: 973px;
+        height: 16px;
+        background: #E5ECF4;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .container-description {
+        width: fit-content;
+        padding-left: 0;
+        margin: 0 auto 200px;
+
+        span {
+            width: 800px;
+        }
+    }    
+}
+
+@media screen and (max-width: 1150px) {
+    .container-description {
+        height: auto;
+        flex-direction: column;
+        margin: 0 auto 145px;
+
+        .div-section {
+            display: flex;
+            width: 620px;
+            height: auto;
+
+            img {
+                width: 96px;
+                height: 96px;
+                margin: 0 40px 0 ;
+            }
+        }
+
+        section {
+            height: auto;
+        }
+
+        .div-section:not(:last-child) {
+            margin-bottom: 40px;
+        }
+
+        span {
+            transform: rotate(90deg);
+            width: 700px;
+            left: inherit;
+            right: 210px;
+            
+        }
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .container-description {
+        margin: 0 auto 120px;
+        width: 80%;
+
+        .div-section {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            img {
+                width: 96px;
+                margin: 0 0 24px 0;
+            }
+        }
+
+        section {
+            text-align: center;
+        }
+
+        span {
+            display: none;
+        }
+
+        .div-section:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+}

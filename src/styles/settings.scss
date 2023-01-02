@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    width: 1440px;
+    margin: auto;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+$orange: #FCB72B;
+
+@media screen and (max-width: 1460px) {
+    #root {
+        width: 100%;
+    }
+}
